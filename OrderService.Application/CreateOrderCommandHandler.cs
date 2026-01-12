@@ -24,7 +24,8 @@ public class CreateOrderCommandHandler
         );
 
         await _eventBus.PublishAsync(orderCreatedEvent);
-
+        Console.WriteLine($"📦 Order {order.Id} created and event published");
+        
         return order;
     }
 }
